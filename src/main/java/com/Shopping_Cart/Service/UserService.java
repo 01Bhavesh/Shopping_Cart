@@ -7,7 +7,7 @@ import com.Shopping_Cart.Models.Order;
 public interface UserService {
 
 	
-	public Order placedOrder(Integer userId,int qty,String coupon) throws Exception;
-	
 	public List<Order> findOrderByUserId(Integer userId) throws Exception;
+
+	public Order placedOrder(Integer userId, Integer qty, String coupon) throws Exception;
 }

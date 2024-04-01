@@ -38,7 +38,7 @@ public class UserController {
 	@PostMapping("/api/userid/{userid}")
 	public Order placedOrder(@PathVariable("userid") Integer userid,@RequestParam("qty") Integer qty,@RequestParam("coupon") String coupon) throws Exception
 	{
-		return userService.placedOrder(userid, (int)qty, coupon);
+		return userService.placedOrder(userid, qty, coupon);
 	}
 	
 	@GetMapping("/api/{userid}/orders")

@@ -65,7 +65,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:5959/api/userid/1?qty=20&coupon=OFF5",
+					"raw": "http://localhost:5959/api/userid/2?qty=30&coupon=\"OFF5\"",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -74,16 +74,16 @@
 					"path": [
 						"api",
 						"userid",
-						"1"
+						"2"
 					],
 					"query": [
 						{
 							"key": "qty",
-							"value": "20"
+							"value": "30"
 						},
 						{
 							"key": "coupon",
-							"value": "OFF5"
+							"value": "\"OFF5\""
 						}
 					]
 				}
@@ -151,6 +151,14 @@
 						"1"
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "PaymentCheck",
+			"request": {
+				"method": "GET",
+				"header": []
 			},
 			"response": []
 		}
