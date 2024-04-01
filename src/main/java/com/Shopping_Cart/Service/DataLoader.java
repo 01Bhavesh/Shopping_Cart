@@ -26,6 +26,9 @@ public class DataLoader implements ApplicationRunner {
 	        this.couponRepository = couponRepository;
 	    }
 
+	    Product product1 = new Product();
+	    Coupon coupon1 = new Coupon();
+	    Coupon coupon2 = new Coupon();
 	    @Override
 	    public void run(ApplicationArguments args) {
 	        // Insert data into users table
@@ -35,13 +38,13 @@ public class DataLoader implements ApplicationRunner {
 	        userRepository.save(user2);
 	        
 	        // Insert data into products table
-	        Product product1 = new Product(1,"Bat", "Cricket Bat", 1000, 100,null);
+	        product1 = new Product(1,"Bat", "Cricket Bat", 1000, 100,null);
 	        productRepository.save(product1);
 
 	        // Insert data into coupons table
-	        Coupon coupon1 = new Coupon(1,"OFF5", 0.05,null);
+	        coupon1 = new Coupon(1,"OFF5", 5 ,null);
 	        couponRepository.save(coupon1);
-	        Coupon coupon2 = new Coupon(2,"OFF10", 0.1 , null);
+	        coupon2 = new Coupon(2,"OFF10", 10 ,null);
 	        couponRepository.save(coupon2);
 	    }
 	}

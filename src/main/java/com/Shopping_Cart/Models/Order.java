@@ -1,6 +1,9 @@
 package com.Shopping_Cart.Models;
 
+import java.time.LocalDateTime;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -25,17 +28,18 @@ import lombok.ToString;
 @Table(name = "orders")
 public class Order {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer orderId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
    
-//    private LocalDateTime orderDate;
+    private LocalDateTime orderDate;
 
     @Column(name = "total_price")
     private double totalPrice;
 
-    private String status;
+    private int qty;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
@@ -46,5 +50,6 @@ public class Order {
             joinColumns = @JoinColumn(name = "order_id"),
             inverseJoinColumns = @JoinColumn(name = "product_id")
     )
+    @JsonIgnore
     private List<Product> products;
 }

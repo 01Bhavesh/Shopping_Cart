@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "9c3d5620-e15c-43ad-8fa9-43353751add6",
+		"name": "Shopping_Cart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32950118"
+	},
+	"item": [
+		{
+			"name": "GetAllCoupons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5959/api/fetchCoupons",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5959",
+					"path": [
+						"api",
+						"fetchCoupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5959/api/inventory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5959",
+					"path": [
+						"api",
+						"inventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PlaceOrder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5959/api/userid/1?qty=20&coupon=OFF5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5959",
+					"path": [
+						"api",
+						"userid",
+						"1"
+					],
+					"query": [
+						{
+							"key": "qty",
+							"value": "20"
+						},
+						{
+							"key": "coupon",
+							"value": "OFF5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindUserById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5959/api/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5959",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findOrderByUserId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5959/api/1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5959",
+					"path": [
+						"api",
+						"1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findOrderByOrderId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5959/api/1/orders/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5959",
+					"path": [
+						"api",
+						"1",
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
