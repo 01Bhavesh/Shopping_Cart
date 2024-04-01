@@ -2,6 +2,7 @@
 # In MySql
 # create database shopping_cart;
 # use shopping_cart
+#Useing Postman check API's
 # GetAllCoupon:- http://localhost:5959/api/fetchCoupons
 # GetAllProducts:- http://localhost:5959/api/inventory
 # PlacedOrder:- http://localhost:5959/api/userid/2?qty=30&coupon=OFF5
