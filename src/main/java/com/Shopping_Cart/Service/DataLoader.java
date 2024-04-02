@@ -38,7 +38,7 @@ public class DataLoader implements ApplicationRunner {
 	        userRepository.save(user2);
 	        
 	        // Insert data into products table
-	        product1 = new Product(1,"Bat", "Cricket Bat", 1000, 100,null);
+	        product1 = new Product(1,"Birani", "Non-veg", 1000, 100,null);
 	        productRepository.save(product1);
 
 	        // Insert data into coupons table
